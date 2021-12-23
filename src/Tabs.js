@@ -5,6 +5,8 @@ import Box from '@material-ui/core/Box';
 import Typography from "@material-ui/core/Typography";
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
+import TabOne from './TabOne';
+import TabTwo from './TabTwo';
 //import { SimpleList, List, Datagrid, EmailField, TextField } from 'react-admin';
 
 
@@ -60,11 +62,11 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        Item One
+        Tab One
       </TabPanel>
       <TabPanel value={value} index={1}>
       <Typography component="div"> 
-      Hello
+      <TabTwo/>
       </Typography>
       </TabPanel>
       <TabPanel value={value} index={2}>
