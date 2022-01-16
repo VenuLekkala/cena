@@ -8,6 +8,8 @@ import Grid from '@material-ui/core/Grid';
 import TabOne from './TabOne';
 import TabTwo from './TabTwo';
 import TabThree from './TabThree';
+import TabFour from './TabFour';
+import TabFive from './TabFive';
 //import { SimpleList, List, Datagrid, EmailField, TextField } from 'react-admin';
 
 
@@ -74,10 +76,10 @@ export default function BasicTabs() {
         <TabThree/>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Item Four
+        <TabFour/>
       </TabPanel>
       <TabPanel value={value} index={4}>
-        Item Five
+      <TabFive/>
       </TabPanel>
 
     </Box>
