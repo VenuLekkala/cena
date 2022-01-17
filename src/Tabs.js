@@ -65,7 +65,7 @@ export default function BasicTabs() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <TabOne/>
+        <TabFive/>
       </TabPanel>
       <TabPanel value={value} index={1}>
       <Typography component="div"> 
@@ -79,7 +79,7 @@ export default function BasicTabs() {
         <TabFour/>
       </TabPanel>
       <TabPanel value={value} index={4}>
-      <TabFive/>
+      <TabOne/>
       </TabPanel>
 
     </Box>

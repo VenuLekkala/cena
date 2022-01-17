@@ -32,16 +32,14 @@ const TabFive = () => {
   const [contacts, setContacts] = useState(data);
   const [addFormData, setAddFormData] = useState({
     fileName: "",
-    address: "",
-    phoneNumber: "",
-    email: "",
+    NoOfContributions: "",
+    UploadStatus: "",
   });
 
   const [editFormData, setEditFormData] = useState({
     fileName: "",
-    address: "",
-    phoneNumber: "",
-    email: "",
+    NoOfContributions: "",
+    UploadStatus: "",
   });
 
   const [editContactId, setEditContactId] = useState(null);
@@ -75,10 +73,9 @@ const TabFive = () => {
 
     const newContact = {
       id: nanoid(),
-      fileName: addFormData.fileName,
-      address: addFormData.address,
-      phoneNumber: addFormData.phoneNumber,
-      email: addFormData.email,
+      fileName: editFormData.fileName,
+      NoOfContributions: editFormData.NoOfContributions,
+      UploadStatus: editFormData.UploadStatus,
     };
 
     const newContacts = [...contacts, newContact];
@@ -89,11 +86,10 @@ const TabFive = () => {
     event.preventDefault();
 
     const editedContact = {
-      id: editContactId,
+      // id: editContactId,
       fileName: editFormData.fileName,
-      address: editFormData.address,
-      phoneNumber: editFormData.phoneNumber,
-      email: editFormData.email,
+      NoOfContributions: editFormData.NoOfContributions,
+      UploadStatus: editFormData.UploadStatus,
     };
 
     const newContacts = [...contacts];
@@ -111,10 +107,9 @@ const TabFive = () => {
     setEditContactId(contact.id);
 
     const formValues = {
-      fileName: contact.fileName,
-      address: contact.address,
-      phoneNumber: contact.phoneNumber,
-      email: contact.email,
+      fileName: editFormData.fileName,
+      NoOfContributions: editFormData.NoOfContributions,
+      UploadStatus: editFormData.UploadStatus,
     };
 
     setEditFormData(formValues);
@@ -144,28 +139,21 @@ const TabFive = () => {
           type="text"
           name="fileName"
           required="required"
-          placeholder="Enter a name..."
+          placeholder="Enter a file name..."
           onChange={handleAddFormChange}
         />
         <input
           type="text"
-          name="address"
+          name="NoOfContributions"
           required="required"
-          placeholder="Enter an addres..."
+          placeholder="Enter No. Of Contributions..."
           onChange={handleAddFormChange}
         />
         <input
           type="text"
-          name="phoneNumber"
+          name="UploadStatus"
           required="required"
-          placeholder="Enter a phone number..."
-          onChange={handleAddFormChange}
-        />
-        <input
-          type="email"
-          name="email"
-          required="required"
-          placeholder="Enter an email..."
+          placeholder="Enter upload status..."
           onChange={handleAddFormChange}
         />
       </form>
@@ -175,10 +163,9 @@ const TabFive = () => {
 		aria-label="a dense table">
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Address</th>
-              <th>Phone Number</th>
-              <th>Email</th>
+              <th>File Name</th>
+              <th>No. Of Contributions</th>
+              <th>Upload Status</th>
               <th>Actions</th>
             </tr>
           </thead>
